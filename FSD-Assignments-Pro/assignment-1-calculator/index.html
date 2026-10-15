@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CALC-2 · Precision Calculator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Chivo+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="device">
+    <header class="top">
+      <span class="brand">CALC<b>-2</b></span>
+      <div class="solar" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+    </header>
+
+    <section class="lcd" id="lcd" aria-live="polite">
+      <p class="lcd-expr" id="expr">0 + 0</p>
+      <p class="lcd-out" id="out" title="Click to copy">0</p>
+    </section>
+
+    <div class="inputs">
+      <label class="field"><span>A</span>
+        <input id="numA" type="number" step="any" inputmode="decimal" placeholder="0" autofocus>
+      </label>
+      <button class="swap" id="swap" type="button" aria-label="Swap A and B" title="Swap A and B">⇄</button>
+      <label class="field"><span>B</span>
+        <input id="numB" type="number" step="any" inputmode="decimal" placeholder="0">
+      </label>
+    </div>
+
+    <div class="ops" role="radiogroup" aria-label="Operator">
+      <button type="button" class="op is-on" role="radio" aria-checked="true" data-op="+" title="Addition">+</button>
+      <button type="button" class="op" role="radio" aria-checked="false" data-op="-" title="Subtraction">−</button>
+      <button type="button" class="op" role="radio" aria-checked="false" data-op="*" title="Multiplication">×</button>
+      <button type="button" class="op" role="radio" aria-checked="false" data-op="/" title="Division">÷</button>
+    </div>
+
+    <div class="actions">
+      <button type="button" id="calc" class="btn primary">Calculate</button>
+      <button type="button" id="reset" class="btn">Reset</button>
+    </div>
+
+    <section class="tape">
+      <div class="tape-head"><h2>Paper tape</h2><button type="button" id="clearTape" class="link">Clear</button></div>
+      <ol id="tape"></ol>
+    </section>
+
+    <p class="hint"><kbd>Enter</kbd> calculate · <kbd>Esc</kbd> reset · click result to copy</p>
+  </main>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FSD Lab · Assignment Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@600;700;800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="hub.css" />
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="#"><span>◐</span> fsd<b>.lab</b></a>
+    <span class="nav-note" id="owner">Full Stack Development</span>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">// FULL STACK DEVELOPMENT · LAB ASSIGNMENTS</p>
+      <h1>Six assignments.<br /><em>Six distinct designs.</em></h1>
+      <p class="sub">From a DOM calculator to React hooks — each task is built to its brief, then polished with its own visual identity.</p>
+      <dl class="stats">
+        <div><dt id="stTotal">6</dt><dd>Assignments</dd></div>
+        <div><dt>3</dt><dd>Vanilla JS</dd></div>
+        <div><dt>3</dt><dd>React</dd></div>
+      </dl>
+    </section>
+
+    <section class="tools">
+      <div class="filters" role="tablist" aria-label="Filter assignments">
+        <button class="f on" data-f="all">All</button>
+        <button class="f" data-f="js">JavaScript</button>
+        <button class="f" data-f="react">React</button>
+      </div>
+      <input id="q" type="search" placeholder="Search assignments…  ( / )" aria-label="Search assignments" />
+    </section>
+
+    <section id="grid" class="grid"></section>
+    <p id="none" class="none" hidden>No assignment matches your search.</p>
+  </main>
+
+  <footer class="foot">Built with HTML · CSS · JavaScript · React + Vite</footer>
+  <script src="hub.js"></script>
+</body>
+</html>

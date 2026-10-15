@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join Orbit · Create your account</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="shell">
+    <aside class="story">
+      <div class="logo"><span></span>Orbit</div>
+      <div class="story-body">
+        <h1>Start your journey with <em>Orbit.</em></h1>
+        <p>Create an account in under a minute. Your details stay on this device — nothing is sent anywhere.</p>
+        <ul class="perks">
+          <li><i>✓</i> Real-time field validation</li>
+          <li><i>✓</i> Password strength coaching</li>
+          <li><i>✓</i> Accessible, keyboard friendly</li>
+        </ul>
+      </div>
+      <small>© Orbit Labs · Demo project</small>
+    </aside>
+
+    <main class="panel">
+      <form id="registrationForm" novalidate>
+        <header>
+          <h2>Create account</h2>
+          <p>Fill in the details below to register.</p>
+        </header>
+
+        <div class="field" data-field="name">
+          <label for="name">Full name</label>
+          <input id="name" name="name" type="text" autocomplete="name" placeholder="e.g. Ananya Iyer" aria-describedby="name-msg">
+          <p class="msg" id="name-msg"></p>
+        </div>
+
+        <div class="field" data-field="email">
+          <label for="email">Email address</label>
+          <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" aria-describedby="email-msg">
+          <p class="msg" id="email-msg"></p>
+        </div>
+
+        <div class="field" data-field="phone">
+          <label for="phone">Mobile number</label>
+          <div class="prefix"><span>+91</span>
+            <input id="phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel-national" placeholder="10-digit number" maxlength="10" aria-describedby="phone-msg">
+          </div>
+          <p class="msg" id="phone-msg"></p>
+        </div>
+
+        <div class="field" data-field="password">
+          <label for="password">Password</label>
+          <div class="pw">
+            <input id="password" name="password" type="password" autocomplete="new-password" placeholder="Create a strong password" aria-describedby="password-msg">
+            <button type="button" class="eye" data-target="password" aria-label="Show password">Show</button>
+          </div>
+          <div class="strength" aria-hidden="true"><i></i><i></i><i></i><i></i><span id="strengthLabel">Too weak</span></div>
+          <ul class="rules" id="rules">
+            <li data-rule="length">8+ characters</li>
+            <li data-rule="lower">Lowercase</li>
+            <li data-rule="upper">Uppercase</li>
+            <li data-rule="digit">Number</li>
+            <li data-rule="special">Special (@$!%*?&amp;)</li>
+          </ul>
+          <p class="msg" id="password-msg"></p>
+        </div>
+
+        <div class="field" data-field="confirm">
+          <label for="confirm">Confirm password</label>
+          <div class="pw">
+            <input id="confirm" name="confirm" type="password" autocomplete="new-password" placeholder="Re-enter password" aria-describedby="confirm-msg">
+            <button type="button" class="eye" data-target="confirm" aria-label="Show confirmation">Show</button>
+          </div>
+          <p class="msg" id="confirm-msg"></p>
+        </div>
+
+        <div class="field check" data-field="terms">
+          <label><input id="terms" name="terms" type="checkbox"><span>I agree to the <a href="#" onclick="return false">Terms</a> and <a href="#" onclick="return false">Privacy Policy</a></span></label>
+          <p class="msg" id="terms-msg"></p>
+        </div>
+
+        <button type="submit" class="submit">Create account</button>
+      </form>
+
+      <section id="success" class="success" hidden aria-live="polite">
+        <div class="tick">✓</div>
+        <h2>You're in, <span id="sName"></span>!</h2>
+        <p>Registration successful. A confirmation would be sent to <b id="sEmail"></b>.</p>
+        <dl><dt>Reference</dt><dd id="sRef"></dd><dt>Mobile</dt><dd id="sPhone"></dd></dl>
+        <button type="button" id="again" class="submit alt">Register another account</button>
+      </section>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

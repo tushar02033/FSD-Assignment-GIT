@@ -1,0 +1,21 @@
+// Plain data → passed to <ProfileCard /> as props (name, image URL, short description + extras).
+export const PROFILES = [
+  { id: 1, image: "https://i.pravatar.cc/200?img=12", name: "Rahul Sharma", title: "Java Developer", role: "Backend", location: "Pune, IN", hue: 212, followers: 1280,
+    description: "Passionate about backend development and building scalable applications.",
+    skills: ["Java", "Spring Boot", "PostgreSQL"], github: "https://github.com", linkedin: "https://linkedin.com" },
+  { id: 2, image: "https://i.pravatar.cc/200?img=47", name: "Priya Patel", title: "Frontend Developer", role: "Frontend", location: "Ahmedabad, IN", hue: 330, followers: 2410,
+    description: "Interested in React, UI design and modern web technologies.",
+    skills: ["React", "CSS", "Figma"], github: "https://github.com", linkedin: "https://linkedin.com" },
+  { id: 3, image: "https://i.pravatar.cc/200?img=11", name: "Amit Verma", title: "CS Student", role: "Student", location: "Delhi, IN", hue: 152, followers: 436,
+    description: "Computer science student exploring software development and problem solving.",
+    skills: ["Python", "DSA", "Git"], github: "https://github.com", linkedin: "https://linkedin.com" },
+  { id: 4, image: "https://i.pravatar.cc/200?img=45", name: "Sneha Kulkarni", title: "Full-Stack Engineer", role: "Backend", location: "Mumbai, IN", hue: 28, followers: 1875,
+    description: "Ships APIs and dashboards end to end, and loves clean, testable code.",
+    skills: ["Node.js", "MongoDB", "Docker"], github: "https://github.com", linkedin: "https://linkedin.com" },
+  { id: 5, image: "https://i.pravatar.cc/200?img=15", name: "Karan Mehta", title: "UI Engineer", role: "Frontend", location: "Bengaluru, IN", hue: 265, followers: 958,
+    description: "Obsessed with design systems, accessibility and smooth micro-interactions.",
+    skills: ["TypeScript", "Storybook", "A11y"], github: "https://github.com", linkedin: "https://linkedin.com" },
+  { id: 6, image: "https://i.pravatar.cc/200?img=44", name: "Neha Joshi", title: "MCA Student", role: "Student", location: "Nagpur, IN", hue: 190, followers: 312,
+    description: "Learning full-stack development and building small projects every week.",
+    skills: ["JavaScript", "SQL", "HTML"], github: "https://github.com", linkedin: "https://linkedin.com" },
+];
